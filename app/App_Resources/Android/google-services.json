@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "984902494385",
+    "firebase_url": "https://qotd-sharer.firebaseio.com",
+    "project_id": "qotd-sharer",
+    "storage_bucket": "qotd-sharer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984902494385:android:496145d266b1ea41",
+        "android_client_info": {
+          "package_name": "org.mastashake08.qotd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984902494385-jq85pbi7gjs2tjb3ptsc1muh8cmtv3c0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHj9E_dp7BxPdbkRBU43b-S1bvuLzXTxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984902494385-jq85pbi7gjs2tjb3ptsc1muh8cmtv3c0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "984902494385-v713eojluigbo0ufbi9upjbfdg1k42eu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.mastashake08.qotd"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
