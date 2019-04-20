@@ -3,33 +3,45 @@
         <ActionBar>
             <GridLayout width="100%" columns="auto, *">
                 <Label text="MENU" @tap="$refs.drawer.nativeView.showDrawer()" col="0"/>
-                <Label class="title" text="Welcome to NativeScript-Vue!"  col="1"/>
+                <Label class="title" text="Quote Of The Day Sharer!"  col="1"/>
             </GridLayout>
         </ActionBar>
 
         <RadSideDrawer ref="drawer">
             <StackLayout ~drawerContent backgroundColor="#ffffff">
-                <Label class="drawer-header" text="Drawer"/>
+                <Label class="drawer-header" text="Menu"/>
 
-                <Label class="drawer-item" text="Item 1"/>
-                <Label class="drawer-item" text="Item 2"/>
-                <Label class="drawer-item" text="Item 3"/>
+                <Label class="drawer-item" text="Twitter"/>
             </StackLayout>
 
             <GridLayout ~mainContent columns="*" rows="*">
                 <Label class="message" :text="msg" col="0" row="0"/>
+                <Button text="Share Quote" @onTap="shareQuote(msg)" />
             </GridLayout>
         </RadSideDrawer>
     </Page>
 </template>
 
 <script >
+import {mapActions} from 'vuex'
+import axios from 'axios'
   export default {
     data() {
       return {
-        msg: 'Hello World!'
+        msg: '',
+	isReady: false
       }
-    }
+    },
+    created(){
+     let that = this
+     axios.get('https://quotes.rest/qod.json').then(data => data{
+      that.msg = `${data.contents.quotes[0].quote} - ${data.contents.quotes[0].author}`
+      that.isReady = true
+     })   
+    },
+  methods:{
+    ...mapActions(['shareQuote'])
+   }
   }
 </script>
 
